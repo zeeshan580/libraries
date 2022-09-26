@@ -7,5 +7,7 @@ def newMaven()
 }
 def newDeploy(ip,aapname)
 {
+  echo "${ip}"
+  echo "${appname}"
   sh "scp /home/ubuntu/.jenkins/workspace/declarative pipeline/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${appname}.war"
 }
